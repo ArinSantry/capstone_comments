@@ -1,0 +1,33 @@
+		 COMMENTS 
+
+------------------------------------
+
+1 | /* File: MP1.cpp
+2 | *  Author: Arin Santry
+3 | *  Date started: 9/7/18
+4 | *  Date due: 9/27/18
+5 | *  Desc: Calculate cost of donut purchase, change due, and change to be given
+6 | */
+14 | int regDonuts; //number of regular donuts purchased
+15 | int dozenReg; //number of dozens of regular donuts
+16 | int remainReg; //remainder after converting to dozens
+17 | int fancyDonuts; //number of fancy donuts purchased
+18 | int dozenFancy; //number of dozens of fancy dozens
+19 | int remainFancy; //remainder after converting to dozens
+20 | const int REG_PRICE = 75; //regular donuts cost 75 cents
+21 | const int REG_DOZEN = 799; //cost of 12 regular donuts in cents
+22 | const int FANCY_PRICE = 85; //fancy donuts cost 85 cents
+23 | const int FANCY_DOZEN = 849; //cost of 12 fancy donuts in cents
+30 | //convert into dozens
+34 | //use modulo to find remainder
+38 | //calculate cost, still all in cents
+42 | //for payment
+43 | int dollarsPaid; //will be in cents
+62 | //find change coins
+79 | //print out change owed
+85 | if (quarters > 0 || dimes > 0 || nickles > 0 || pennies > 0)  //if there are coins remaining, add a comma, if not, add a period
+
+Number of comments: 19
+Number of in-line comments: 18
+Number of block comments: 1
+Proportion of comments in code: 14.393939393939394%
