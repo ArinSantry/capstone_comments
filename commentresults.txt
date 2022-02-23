@@ -27,7 +27,16 @@
 79 | //print out change owed
 85 | if (quarters > 0 || dimes > 0 || nickles > 0 || pennies > 0)  //if there are coins remaining, add a comma, if not, add a period
 
+
+------------------------------------
+
+Number of lines: 132
+Number of characters: 3085
+
 Number of comments: 19
 Number of in-line comments: 18
 Number of block comments: 1
-Proportion of comments in code: 14.393939393939394%
+Number of characters in comments: 1012
+
+Proportion of comments in code (comments lines / total lines): 14.39%
+Proportion of characters in comments (comment characters / total characters): 32.8%

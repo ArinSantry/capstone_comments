@@ -3,12 +3,23 @@
 ------------------------------------
 
 1 | /*File Name: Fall MP1 2018
+2 | Author:    [REDACTED]
+3 | Date:      Due 9/27/2018
+4 | Professor: Dr. Estell
 5 | Course:    Programming 1*/
 7 | /*This program is to be used for a donut shop. This program will
+8 | accomplish multiple tasks. The first task is to read in how many
+9 | regular and fancy donuts the customer orders, and the cost of the
+10 | order. The second tasks it to determine the change by subtracting
+11 | the price of the order from how much money the customer gives.
+12 | Finally, the program takes the change, and determiend how the
+13 | user can pay back the customer in types of coins and dollars,
 14 | including dollar bills, quarters, nickels, and dimes.*/
 16 | #include <iostream> //basic setup of program
 17 | using namespace std; //basic setup of program
 23 | /* SECTION 1
+24 | This section is for declaring variables.
+25 | All variables are integers, except for "period", which is for
 26 | when the user enters in a period seperating the dollars and cents.*/
 29 | //These variables are for the number of donuts the customer buys:
 30 | int regDonuts; //variable for number of reular donuts
@@ -30,10 +41,12 @@
 48 | int nickels; //how many nickles the customer will recieve in change
 49 | int pennies; //how many pennies the customer will recieve in change
 50 | int coinTypes; /*this is for many different tpyes of coin will
+51 | be returned to the customer, the variable is used
 52 | for grammar purposes when displaying change*/
 54 | char period; /*this is for when the user inputs the amount the customer pays,
 55 | and is for reading in the period between the dollars and cents*/
 59 | /* SECTION 2
+60 | This section is for determining the number of regular and fancy donuts
 61 | the customer buys, and the cost.*/
 64 | cout << "Number of regular donuts ordered: "; /*prompts user to enter
 65 | number of regular donuts*/
@@ -42,10 +55,12 @@
 69 | number of fancy donuts*/
 70 | cin >> fanDonuts; //reads in input for number of fancy donuts
 72 | regDonutsDozen = regDonuts / 12; /*calculates the number of dozens of regular
+73 | donuts using division (remainder not included
 74 | as the variables are integers)*/
 75 | regDonutsIndiv = regDonuts % 12; /*calculates the individual number of regular donuts
 76 | after the dozens using modulo*/
 77 | fanDonutsDozen = fanDonuts / 12; /*calculates the number of dozens of regular donuts
+78 | using division (remainder not included as the
 79 | variables are integers)*/
 80 | fanDonutsIndiv = fanDonuts % 12; /*calculates the individual number of fancy
 81 | donuts after the dozens*/
@@ -61,16 +76,38 @@
 96 | /*for the line above: if the cents section after the period is less than ten,
 97 | a zero is added after the period (i.e. "1.08" instead of "1.8")*/
 100 | /*for the line above: if the cents section after the period is more than ten,
+101 | the cents section wil simply be the remainder of the priceInCents / 100, or
 102 | priceInCents % 100*/
 104 | cout << "Customer pays $"; //user inputs how much the customer payed
 108 | //converts the difference between the amount payed and the price into cents only
 112 | /* For the line above:
+113 | outputs the dollar section of the change,
 114 | converting the changeInCents into dollars*/
 117 | /*a dash is added to indicate the number of
+118 | coins to be returned are about to be given
+119 | if the cents section after the period is less
+120 | than ten, a zero is added after the period
 121 | (i.e. "1.08" instead of "1.8")*/
 123 | /*a dash is added to indicate the number of
+124 | coins to be returned are about to be given
+125 | if the cents section after the period is
+126 | more than ten, the cents section wil simply
+127 | be the remainder of the "priceInCents" / 100,
 128 | or priceInCents % 100*/
 139 | /* SECTION 3
+140 | This section is for determining the amount of change the customer will recieve.
+141 | It achieves so with the following steps:
+142 | 1) The number of dollars to go into the change, or int "changeInCents"
+143 | is determined by diving "changeInCents" by 100.
+144 | 2) The remaining cents that can't be returned in dollars is
+145 | determined using modulo.
+146 | 3) The program then checks to see how many quarters will
+147 | go into the remaining "changeInCents" by diving "changeInCents" by 25
+148 | 4) The remaining cents that can't be returned in
+149 | quarters is determined using modulo.
+150 | 5) The process continues for dimes
+151 | ("changeInCents" / 10) and nickels ("changeInCents" / 5).
+152 | 6) The final remainder than can't be returned
 153 | with dollars, quarters, dimes, or nickels then covered with pennies*/
 157 | /*determines the number of one dollar bills that will go
 158 | into the change and can be returned to the customer*/
@@ -89,8 +126,13 @@
 181 | /*sets the change to the remainder after the
 182 | nickles are determined using modulo*/
 184 | pennies = changeInCents; /*the final remainder not able to be covered
+185 | with dollars, quarters, dimes, or nickels will
 186 | be covered with pennies*/
 190 | /*SECTION 4
+191 | This final section will tell the user how many
+192 | coins need to be returned to the customer.
+193 | The section will also determine the correct
+194 | grammar to display, for example, making words
 195 | plural or singular depending on how many coins there are.*/
 198 | coinTypes = 0; //this determines how many types of coins there are
 200 | //if a coin type is present, add to the "coinTypes" variable
@@ -127,9 +169,19 @@
 296 | //if there is only one penny in change, make the word "penny" singular - "penny"
 298 | //if there are multiple pennnies, and the word "penny" plural - "pennies"
 299 | /*NOTE: because pennies will always be the
+300 | last type of coin to be printed out, it will
 301 | always end with a period*/
+
+
+------------------------------------
+
+Number of lines: 302
+Number of characters: 12138
 
 Number of comments: 94
 Number of in-line comments: 62
 Number of block comments: 32
-Proportion of comments in code: 31.125827814569533%
+Number of characters in comments: 9386
+
+Proportion of comments in code (comments lines / total lines): 31.12%
+Proportion of characters in comments (comment characters / total characters): 77.32%

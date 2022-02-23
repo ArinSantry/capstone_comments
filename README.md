@@ -1,5 +1,5 @@
 # capstone_comments
-Part of the C++ Autograder capstone - this file parses through a .cpp file' comments and writes them into a .txt
+Part of the C++ Autograder capstone - this file parses through a .cpp file's comments and writes them into a .txt
 
  comments.py
  Arin Santry
@@ -8,7 +8,10 @@ Part of the C++ Autograder capstone - this file parses through a .cpp file' comm
 
  This program will read an inputted C++ code file and parse out the comments
  count the number of comments
- proportion of comments (number comments/number lines)
+ count the number of characters in comments
+ count total number of lines and total number of characters
+ proportion of comments (number comments / number lines)
+ proportion of comment characters (comment characters / total characters)
  write comments and their line numbers into a specified output text file
  the input file to be tested must be in the same folder as this program, or the path must be specified in the command line argument
 
@@ -25,10 +28,13 @@ Output file format:
 
 ...
 
-Number of comments: x
+Number of lines: x
+Number of characters: y
 
-Number of inline comments: y
+Number of comments: a+b
+Number of in-line comments: a
+Number of block comments: b
+Number of characters in comments: c
 
-Number of block comments: z
-
-Proportion of comments: p%
+Proportion of comments in code (comments lines / total lines): (a+b)/x
+Proportion of characters in comments (comment characters / total characters): c/y
